@@ -22,6 +22,8 @@ import { MuiInferencer } from "@refinedev/inferencer/mui";
 
 import { BlogPostList } from "components/blog-posts/list";
 import { BlogPostEdit } from "components/blog-posts/edit";
+import { BlogPostShow } from "components/blog-posts/show";
+import { BlogPostCreate } from "components/blog-posts/create";
 
 function App() {
   return (
@@ -63,9 +65,9 @@ function App() {
                   />
                   <Route path="blog-posts">
                     <Route index element={<BlogPostList />} />
-                    <Route path="show/:id" element={<MuiInferencer />} />
+                    <Route path="show/:id" element={<BlogPostShow />} />
                     <Route path="edit/:id" element={<BlogPostEdit />} />
-                    <Route path="create" element={<MuiInferencer />} />
+                    <Route path="create" element={<BlogPostCreate />} />
                   </Route>
                   <Route path="*" element={<ErrorComponent />} />
                 </Route>
