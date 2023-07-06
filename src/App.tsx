@@ -21,6 +21,7 @@ import { ColorModeContextProvider } from "./contexts/color-mode";
 import { MuiInferencer } from "@refinedev/inferencer/mui";
 
 import { BlogPostList } from "components/blog-posts/list";
+import { BlogPostEdit } from "components/blog-posts/edit";
 
 function App() {
   return (
@@ -63,7 +64,7 @@ function App() {
                   <Route path="blog-posts">
                     <Route index element={<BlogPostList />} />
                     <Route path="show/:id" element={<MuiInferencer />} />
-                    <Route path="edit/:id" element={<MuiInferencer />} />
+                    <Route path="edit/:id" element={<BlogPostEdit />} />
                     <Route path="create" element={<MuiInferencer />} />
                   </Route>
                   <Route path="*" element={<ErrorComponent />} />
