@@ -20,6 +20,8 @@ import { ColorModeContextProvider } from "./contexts/color-mode";
 
 import { MuiInferencer } from "@refinedev/inferencer/mui";
 
+import { BlogPostList } from "components/blog-posts/list";
+
 function App() {
   return (
     <BrowserRouter>
@@ -59,7 +61,7 @@ function App() {
                     element={<NavigateToResource resource="blog_posts" />}
                   />
                   <Route path="blog-posts">
-                    <Route index element={<MuiInferencer />} />
+                    <Route index element={<BlogPostList />} />
                     <Route path="show/:id" element={<MuiInferencer />} />
                     <Route path="edit/:id" element={<MuiInferencer />} />
                     <Route path="create" element={<MuiInferencer />} />
